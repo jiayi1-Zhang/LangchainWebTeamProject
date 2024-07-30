@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-sidebar">&times;</button>
+        <h2>Upload</h2>
+        <input type="file" id="file-upload" accept=".txt">
+        <label for="file-upload" id="file-label">Your file</label>
+    </div>
+    <div class="chat-container" id="chat-container">
+        <div class="header-container">
+            <button class="open-btn" id="open-sidebar">&#9776;</button>
+            <h1 class="chat-header">Chatbot</h1>
+        </div>
+        <div id="chat-window" class="chat-window">
+            <div id="intro-box" class="intro-box">
+                <p>Welcome to our chatbot! This is an introduction to help you get started.</p>
+                <p>{{ response }}</p>
+                <img src="{{ url_for('static', filename="images/intro-image.jpg") }}" alt="Introduction Image">
+            </div>
+            <!-- Messages will be appended here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

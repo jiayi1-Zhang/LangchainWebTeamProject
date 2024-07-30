@@ -11,7 +11,7 @@
         <button class="close-btn" id="close-sidebar">&times;</button>
         <h2>Upload</h2>
         <input type="file" id="file-upload" accept=".txt">
-        <label for="file-upload" id="file-label">Your file</label>
+        <label for="file-upload" id="file-label">Your file（上传文件功能暂不可用）</label>
     </div>
     <div class="chat-container" id="chat-container">
         <div class="header-container">
@@ -21,7 +21,7 @@
         <div id="chat-window" class="chat-window">
             <div id="intro-box" class="intro-box">
                 <p>Welcome to our chatbot! This is an introduction to help you get started.</p>
-                <p>{{ response }}</p>
+
                 <img src="{{ url_for('static', filename="images/intro-image.jpg") }}" alt="Introduction Image">
             </div>
             <!-- Messages will be appended here -->
